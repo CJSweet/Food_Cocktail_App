@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.foodandcocktailapp.cocktail.ui.CocktailDetailViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/cdetailed_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@android:color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/cdetailed_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cdetailed_image"
+                    android:text="@{viewModel.drinkName}"
+                    tools:text="This is the Name" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cdetailed_glass"
+                    android:text="@{viewModel.glass}"
+                    app:layout_constraintTop_toBottomOf="@id/cdetailed_name"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:text="Cocktail glass"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cdetailed_category"
+                    app:layout_constraintTop_toBottomOf="@id/cdetailed_name"
+                    app:layout_constraintStart_toEndOf="@id/cdetailed_glass"
+                    android:text="@{viewModel.category}"
+                    tools:text="Ordinary Drink"
+                    android:layout_marginStart="5dp"
+                    />
+
+                <TextView
+                    android:id="@+id/cdetailed_ing_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cdetailed_glass"
+                    android:text="@string/ingredients" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cdetailed_ingd_list"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cdetailed_ing_title"
+                    android:orientation="vertical"/>
+
+                <TextView
+                    android:id="@+id/cdetailed_meas1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cdetailed_ingd_list"
+                    tools:text="1 1/2 oz Tequila" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cdetailed_instructions"
+                    android:text="@{viewModel.instructions}"
+                    app:layout_constraintTop_toBottomOf="@id/cdetailed_meas1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:text="Pour into glass, shake up, ice, enjoy."/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
+    app:startDestination="@id/cocktailStartingFragment">
+
+    <fragment
+        android:id="@+id/cocktailStartingFragment"
+        android:name="com.example.foodandcocktailapp.cocktail.ui.CocktailStartingFragment"
+        android:label="CocktailStartingFragment" >
+        <action
+            android:id="@+id/action_cocktailStartingFragment_to_searchedCocktailsFragment"
+            app:destination="@id/searchedCocktailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchedCocktailsFragment"
+        android:name="com.example.foodandcocktailapp.cocktail.ui.SearchedCocktailsFragment"
+        android:label="SearchedCocktailsFragment" >
+        <action
+            android:id="@+id/action_searchedCocktailsFragment_to_cocktailDetailFragment"
+            app:destination="@id/cocktailDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cocktailDetailFragment"
+        android:name="com.example.foodandcocktailapp.cocktail.ui.CocktailDetailFragment"
+        android:label="CocktailDetailFragment" >
+        <argument
+            android:name="cocktail"
+            app:argType="com.example.foodandcocktailapp.cocktail.util.Cocktail" />
+    </fragment>
+</navigation>

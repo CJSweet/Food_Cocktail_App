@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Food And Cocktail App</string>
+    <string name="search_cocktail_by_name">Search Cocktail by Name</string>
+    <string name="search_by_first_letter">Search by First Letter</string>
+    <string name="search_ingredient_by_name">Search Ingredient by Name</string>
+    <string name="search_cocktail_by_ingredient">Search Cocktail by Ingredient</string>
+    <string name="give_me_a_random_cocktail">Give Me a Random Cocktail</string>
+    <string name="help_me_find_a_cocktail">Help Me Find a Cocktail</string>
+    <string name="recent_cocktails">Recent Cocktails</string>
+    <string name="ingredients">Ingredients:</string>
+</resources>
